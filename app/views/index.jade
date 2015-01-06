@@ -1,0 +1,47 @@
+extends ./layout.jade
+block content
+
+  .Hero
+    .container
+      h1 Hi, I'm Rachel Salmon.
+      h3 I’m a
+        em  graphic designer.<br />
+        |  I enjoy working across
+        em  print and web.
+
+  .Featured.Featured--microsoft
+    .container
+      .Featured-date December 2014
+      .Featured-title Microsoft Research
+      .Featured-description Identity design for the Human Experience &amp; Design group at Microsoft Research, Cambridge.
+      a(href="microsoft.html").Featured-link Read more
+
+  .Featured.Featured--oxfam
+    .container
+      .Featured-date November 2014
+      .Featured-title Oxfam
+      .Featured-description Print collatoral design for Oxfam, Mill Road in Cambridge.
+      a(href="#").Featured-link Read more
+
+  .Featured.Featured--capucine
+    .container
+      .Featured-date July 2014
+      .Featured-title Capucine EP
+      .Featured-description Album artwork for the beautiful and talened Capucine.
+      a(href="#").Featured-link Read more
+
+  .Featured.Featured--liveaboard
+    .container
+      .Featured-date March 2014
+      .Featured-title The Liveaboard Trust
+      .Featured-description Identity design for a Cambridge-based charity.
+      a(href="#").Featured-link Read more
+
+  .Featured.Featured--arts
+    .container
+      .Featured-date March 2014
+      .Featured-title The Cambridge Art Salon
+      .Featured-description Print collatoral design for a Cambridge-based charity.
+      a(href="#").Featured-link Read more
+
+  include ./includes/behance
