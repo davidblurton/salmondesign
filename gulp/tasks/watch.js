@@ -9,5 +9,6 @@ module.exports = function(gulp) {
         gulp.config.source + '/videos/**/*'
     ], ['copy']);
     gulp.watch(gulp.config.source + '/views/**/*.jade', ['jade']);
+    gulp.watch(gulp.config.source + '/img/**/*.{png,gif,jpg,jpeg,svg}', ['images']);
   });
 };

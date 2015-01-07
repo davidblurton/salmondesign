@@ -1,10 +1,15 @@
 .Hero {
   &:extend(.section);
-  background-color: #FAF9FC;
-  box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
+  &:extend(.muted);
+  text-align: center;
+
+  h1 {
+    color: #737373;
+  }
 
   em {
     font-style: normal;
     font-weight: 400;
+    color: #737373;
   }
 }

@@ -1,0 +1,28 @@
+.Quote {
+  &:extend(.section);
+  color: white;
+  margin: 5em auto;
+}
+
+.Quote-body {
+  &:extend(h2);
+}
+
+.Quote-body:before {
+  content: '“';
+  display: block;
+  font-family: 'Georgia';
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.Quote-attribution {
+  &:extend(h4);
+}
+
+.Quote--microsoft {
+  background-color: #009A93;
+}
