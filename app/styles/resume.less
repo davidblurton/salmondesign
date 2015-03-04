@@ -2,18 +2,24 @@
 @import "grid";
 
 .Resume {
-  h1, h2, h3 {
-    text-align: center;
-  }
+
 }
 
 .Resume-section {
   padding: 1em 0;
+  text-align: center;
+}
+
+.Resume-sectionTitle {
+  &:extend(h3);
+  color: @brand-green;
+  text-align: center;
 }
 
 .Job {
   padding: 2em 0;
   display: flex;
+  text-align: left;
 }
 
 .Job-date {
