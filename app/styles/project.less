@@ -1,20 +1,9 @@
 @import "grid";
+@import "colors";
 
 .Project {
   .width(12);
   margin: 0 auto;
-
-  h2 {
-    margin: 0;
-  }
-
-  h4 {
-    margin-top: 0;
-  }
-
-  h2, h4 {
-    text-align: center;
-  }
 }
 
 .Project-columns {
@@ -29,4 +18,17 @@
 
 .Project-columnRight {
   .width(8);
+}
+
+.Project-title {
+  &:extend(h2);
+  margin: 0;
+  text-align: center;
+}
+
+.Project-subTitle {
+  &:extend(h3);
+  margin: 0;
+  text-align: center;
+  color: @brand-green;
 }
