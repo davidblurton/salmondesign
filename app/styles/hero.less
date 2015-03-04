@@ -1,15 +1,17 @@
+@import "colors";
+
 .Hero {
   &:extend(.section);
   &:extend(.muted);
   text-align: center;
 
   h1 {
-    color: #737373;
+    color: @heading;
   }
 
   em {
     font-style: normal;
     font-weight: 400;
-    color: #737373;
+    color: @heading;
   }
 }

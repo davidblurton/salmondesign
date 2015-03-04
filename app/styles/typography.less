@@ -1,8 +1,10 @@
+@import "colors";
+
 html,
 body {
   font-family: 'Raleway', sans-serif;
   -webkit-text-rendering: optimizeLegibility;
-  color: #666;
+  color: @text;
   font-weight: 400;
   font-size: 16px;
 
@@ -28,7 +30,7 @@ h2 {
 
 h3 {
   font-size: 1.8em;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 h4 {
@@ -54,12 +56,12 @@ strong {
 }
 
 .muted {
-  color: #9494A1;
+  color: lighten(@text, 10%);
 }
 
 a {
   text-decoration: none;
-  color: #A0D2BE;
+  color: @brand-green;
 }
 
 a:hover {

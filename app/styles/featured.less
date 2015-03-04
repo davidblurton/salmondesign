@@ -7,6 +7,7 @@
   &:extend(.section);
   /*padding: 10em 0 15em 0;*/
   color: white;
+  position: relative;
 }
 
 /*
@@ -79,11 +80,39 @@
   margin-bottom: 1em;
 }
 
+.Featured-image {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+}
+
+.Feature-image--oxfam {
+  background-image: url(/img/featured/oxfam.svg);
+}
+
+.Feature-image--microsoft {
+  background-image: url(/img/featured/microsoft.svg);
+}
+
+.Feature-image--capucine {
+  background-image: url(/img/featured/capucine.svg);
+}
+
+.Feature-image--liveaboard {
+  background-image: url(/img/featured/liveaboard.svg);
+}
+
+.Feature-image--arts {
+  background-image: url(/img/featured/arts.svg);
+}
+
 .Featured-link {
   color: white;
   border: 2px solid white;
   padding: 0.5em 1em;
-  border-radius: .5em;
 }
 
 .Featured-link:hover {
