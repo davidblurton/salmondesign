@@ -25,14 +25,34 @@
 .Job-date {
   .width(4);
   text-align: right;
-  padding-right: 1em;
+  padding-right: 2em;
 }
 
 .Job-details {
   .width(8);
   margin: 0;
+  padding-left: 2em;
+  position: relative;
+}
+
+.Job-details:before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: @brand-green;
+  border-radius: 50%;
+}
+
+.Job-details:after {
+  content: '';
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: -2px;
   border-left: 2px solid @text;
-  padding-left: 1em;
 }
 
 .Job-title {
