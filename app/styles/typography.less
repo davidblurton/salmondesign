@@ -3,7 +3,7 @@
 html,
 body {
   font-family: 'Raleway', sans-serif;
-  -webkit-text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   color: @text;
   font-weight: 400;
   font-size: 16px;
@@ -85,4 +85,13 @@ p + p {
 
 .u-brand {
   color: @brand-green;
+}
+
+.u-smallCaps {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.u-small {
+  font-size: 70%;
 }
