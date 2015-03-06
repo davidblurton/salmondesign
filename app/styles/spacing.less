@@ -14,6 +14,10 @@ img {
 .container {
   .width(4);
   margin: 0 auto;
+
+  @media @mobile {
+    .width(12);
+  }
 }
 
 * + * {
@@ -24,10 +28,4 @@ img {
   padding: 8em 0;
   margin: 0;
   width: 100%;
-}
-
-@media @mobile {
-  .container {
-    .width(12);
-  }
 }
