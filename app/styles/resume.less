@@ -5,9 +5,35 @@
 
 }
 
+.Resume-about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Resume-pic {
+  background-image: url(img/rachel.jpg);
+  background-size: cover;
+  width: @3cols;
+  height: @3cols;
+  border-radius: 50%;
+  margin: 0 auto;
+  filter: grayscale(0%);
+  transition: all 0.3s;
+}
+
+.Resume-pic:hover {
+  filter: grayscale(100%);
+  transition: all 0.3s;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.Resume-aboutDetails {
+  .width(8);
+}
+
 .Resume-section {
   padding: 1em 0;
-  text-align: center;
 }
 
 .Resume-sectionTitle {
