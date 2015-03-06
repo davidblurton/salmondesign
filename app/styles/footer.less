@@ -2,16 +2,16 @@
 @import "colors";
 
 .Footer {
-  .width(12);
-  padding: 2em;
+  &:extend(.container);
   display: flex;
-  margin: 2em auto 0;
+  flex-wrap: wrap;
+  margin-top: 2rem;
   border-top: 2px solid @border;
 }
 
 .Footer-column {
-  .width(6);
-  margin: 0;
+  flex-basis: @4cols;
+  margin: 2em auto 0;
 }
 
 .Footer-title {

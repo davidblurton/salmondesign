@@ -1,4 +1,5 @@
 @import "colors";
+@import "responsive";
 
 html,
 body {
@@ -21,16 +22,28 @@ h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
+
+  @media @mobile {
+    font-size: 3em;
+  }
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2em;
+
+  @media @mobile {
+    font-size: 2.5em;
+  }
 }
 
 h3 {
-  font-size: 1.8em;
   font-weight: 400;
+  font-size: 1.2em;
+
+  @media @mobile {
+    font-size: 1.8em;
+  }
 }
 
 h4 {
