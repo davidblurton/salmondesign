@@ -1,5 +1,6 @@
 @import "colors";
 @import "grid";
+@import "responsive";
 
 .Resume {
 
@@ -45,18 +46,25 @@
 .Job {
   padding: 1em 0;
   display: flex;
+  flex-wrap: wrap;
   text-align: left;
 }
 
 .Job-date {
   .width(4);
-  text-align: right;
-  padding-right: 2em;
-  margin-top: 3px; // align with title
+  text-align: left;
+  padding-left: 2rem;
+  font-size: .85rem;
+
+  @media @mobile {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 2em;
+  }
 }
 
 .Job-details {
-  .width(8);
+  .width(7);
   margin: 0;
   padding-left: 2em;
   position: relative;
@@ -83,15 +91,15 @@
 }
 
 .Job-title {
-  font-size: 1.2em;
-  font-weight: 700;
+  &:extend(h4);
   margin: 0;
 }
 
 .Job-subtitle {
   font-size: 1.2em;
+  line-height: 1;
   font-weight: 400;
-  margin: 0;
+  margin-top: 0;
   color: @muted;
 }
 
