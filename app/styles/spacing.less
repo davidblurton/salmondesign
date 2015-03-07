@@ -20,6 +20,15 @@ img {
   }
 }
 
+.container--wide {
+  .width(4);
+  margin: 0 auto;
+
+  @media @desktop {
+    .width(16);
+  }
+}
+
 * + * {
   margin-top: 1.5rem;
 }

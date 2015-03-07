@@ -1,0 +1,19 @@
+@import "responsive";
+
+@media @desktop {
+  .Gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 -1em;
+  }
+
+  .Gallery-image {
+    padding: 1em 0 0 1em;
+    flex: 1;
+  }
+
+  .Gallery-image + .Gallery-image {
+    margin: 0;
+  }
+}
+
