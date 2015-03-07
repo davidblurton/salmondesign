@@ -1,13 +1,40 @@
 @import "colors";
 @import "grid";
+@import "responsive";
 
 .Resume {
 
 }
 
+.Resume-about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Resume-pic {
+  background-image: url(img/rachel.jpg);
+  background-size: cover;
+  width: @3cols;
+  height: @3cols;
+  border-radius: 50%;
+  margin: 0 auto;
+  filter: grayscale(0%);
+  transition: all 0.3s;
+}
+
+.Resume-pic:hover {
+  filter: grayscale(100%);
+  transition: all 0.3s;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.Resume-aboutDetails {
+  .width(8);
+}
+
 .Resume-section {
   padding: 1em 0;
-  text-align: center;
 }
 
 .Resume-sectionTitle {
@@ -19,18 +46,25 @@
 .Job {
   padding: 1em 0;
   display: flex;
+  flex-wrap: wrap;
   text-align: left;
 }
 
 .Job-date {
   .width(4);
-  text-align: right;
-  padding-right: 2em;
-  margin-top: 3px; // align with title
+  text-align: left;
+  padding-left: 2rem;
+  font-size: .85rem;
+
+  @media @desktop {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 2em;
+  }
 }
 
 .Job-details {
-  .width(8);
+  .width(7);
   margin: 0;
   padding-left: 2em;
   position: relative;
@@ -43,8 +77,8 @@
   top: 0;
   width: 30px;
   height: 30px;
-  background-color: @brand-green;
-  border-radius: 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" enable-background="new 0 0 40 40"><path fill="#A0D2BE" d="M20 40C9 40 0 31 0 20S9 0 20 0s20 9 20 20-9 20-20 20zm0-30.7C14.1 9.3 9.3 14.1 9.3 20S14.1 30.7 20 30.7 30.7 25.9 30.7 20 25.9 9.3 20 9.3z"/></svg>');
+  background-size: contain;
 }
 
 .Job-details:after {
@@ -57,15 +91,15 @@
 }
 
 .Job-title {
-  font-size: 1.2em;
-  font-weight: 700;
+  &:extend(h4);
   margin: 0;
 }
 
 .Job-subtitle {
   font-size: 1.2em;
+  line-height: 1;
   font-weight: 400;
-  margin: 0;
+  margin-top: 0;
   color: @muted;
 }
 

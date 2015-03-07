@@ -5,35 +5,9 @@
 
 .Featured {
   &:extend(.section);
-  /*padding: 10em 0 15em 0;*/
   color: white;
   position: relative;
 }
-
-/*
-.Featured:nth-of-type(odd) {
-  transform: skew(0, -1deg);
-  margin: -5% auto;
-}
-
-.Featured:nth-of-type(odd) > * {
-  transform: skew(0, 1deg);
-}
-
-.Featured:nth-of-type(even) {
-  transform: skew(0, 1deg);
-  margin: -5% auto;
-}
-
-.Featured:nth-of-type(even) > * {
-  transform: skew(0, -1deg);
-}
-
-.Featured:last-of-type {
-  padding: 10em 0;
-}
-*/
-
 
 .Featured {
   .Featured-date, .Featured-title, .Featured-description {
@@ -60,9 +34,8 @@
 }
 
 .Featured-date {
-  font-size: 1em;
+  font-size: 1.5em;
   opacity: 0.6;
-  text-transform: uppercase;
 }
 
 .Featured-year {
@@ -87,6 +60,7 @@
   right: 0;
   bottom: 0;
   background-repeat: no-repeat;
+  display: none;
 }
 
 .Feature-image--oxfam {
@@ -111,14 +85,17 @@
 
 .Featured-link {
   color: white;
-  border: 1px solid white;
-  border-radius: 5px; 
+  border: 2px solid white;
+  border-radius: 5px;
   padding: 0.5em 1em;
+  font-weight: 700;
+  transition: all 0.3s;
 }
 
 .Featured-link:hover {
-  border: 1px solid white;
+  border: 2px solid white;
   background-color: white;
+  transition: all 0.3s;
 }
 
 .Featured--microsoft {
@@ -147,7 +124,7 @@
 
 .Featured--liveaboard {
   background-color: #215273;
-  
+
   .Featured-link:hover {
     color: #215273;
   }
