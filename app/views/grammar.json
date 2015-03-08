@@ -1,9 +1,0 @@
-{
-  "number": ["singular", "plural"],
-  "case": ["nominative", "accusative", "genitive", "dative"],
-  "person": ["first", "second", "third"],
-  "gender": ["masculine", "feminine", "neuter"],
-  "article": ["definite", "indefinite"],
-  "voice": ["active", "middle", "passive"],
-  "mood": ["indicative", "subjunctive", "imperitive", "conditional"]
-}
