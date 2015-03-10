@@ -4,9 +4,12 @@ module.exports = function(gulp, gutil) {
   var prod = gutil.env.prod;
 
   gulp.task('jade', function() {
-    return gulp.srcWithErrorHandling(gulp.config.source + '/views/*.jade')
+    return gulp.srcWithErrorHandling(gulp.config.source + '/views/**/*.jade')
       .pipe(jade({
-        pretty: !prod
+        pretty: !prod,
+        locals: {
+          prod: prod
+        }
       }))
       .pipe(gulp.dest(gulp.config.target))
       .pipe(prod ? gutil.noop() : connect.reload());

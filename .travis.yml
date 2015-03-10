@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '0.12'
+branches:
+  only:
+  - master
+install: npm install
+script: gulp build --prod
+after_success: npm run-script deploy
+env:
+  global:
+  - secure: i6kK9rp0hx/46DoWPc8RQZPKnKOPafH+Gv9RdmRxrCdeO8DMHhq/vKWwfrN6271mFlfT4HGXFEntDkO7oEkdb5AOb3xRao5MkVh4k6cYRMsoLr25OalAncwyMpEpIkY1tEoaX8kZ0pD9OPIpRO7bV1TuiBon8yhGadf+VghXwe0=

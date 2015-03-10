@@ -6,13 +6,12 @@ module.exports = function(gulp, gutil) {
     var csso = require('gulp-csso');
     var prod = gutil.env.prod;
 
-    return gulp.srcWithErrorHandling(gulp.config.source + '/styles/**/*.less')
+    return gulp.srcWithErrorHandling(gulp.config.source + '/styles/main.less')
       .pipe(less({
         paths: [
-          gulp.config.source + '/styles',
-          'node_modules'
+          gulp.config.source + '/styles'
         ],
-        rootpath: '../../',
+        rootpath: '../',
         relativeUrls: true
       }))
       .pipe(!prod ? gutil.noop() : csso())
