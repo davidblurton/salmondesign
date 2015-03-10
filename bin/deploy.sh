@@ -12,5 +12,5 @@ git config user.name "Travis CI"
 git config user.email "deployments@salmondesign.co"
 git add --all
 git commit -m "${TRAVIS_COMMIT}"
-git push --force "https://${GH_TOKEN}@${GH_REF}" HEAD:gh-pages > /dev/null 2>&1
+git push --force "https://${GH_TOKEN}@${GH_REF}" HEAD:gh-pages
 )
