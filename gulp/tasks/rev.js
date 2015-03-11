@@ -11,7 +11,8 @@ module.exports = function(gulp, gutil) {
         ignore: [
           'index.html',
           'favicon.png',
-          'CNAME'
+          'CNAME',
+          'og.jpg'
         ],
         quiet: true
       }))
