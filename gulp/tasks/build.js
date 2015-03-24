@@ -1,7 +1,13 @@
 var runSequence = require('run-sequence');
 
-module.exports = function(gulp) {
+module.exports = function(gulp, gutil) {
+  var prod = gutil.env.prod;
+
   gulp.task('build', ['clean'], function(cb) {
-    runSequence('copy', 'browserify', 'less', 'jade', 'images', cb);
+    if(prod) {
+      runSequence('copy', 'less', 'jade', 'images', 'rev', cb);
+    } else {
+      runSequence('copy', 'less', 'jade', 'images', cb);
+    }
   });
 };

@@ -6,15 +6,14 @@ module.exports = function(gulp) {
       gulp.start('less');
     });
 
-    watch(gulp.config.source + '/js/**/*.js', function() {
-      gulp.start('browserify');
-    });
-
     watch([
       gulp.config.source + '/*.html',
       gulp.config.source + '/img/**/*.{png,gif,jpg,jpeg,svg}',
       gulp.config.source + '/fonts/**/*',
-      gulp.config.source + '/videos/**/*'
+      gulp.config.source + '/videos/**/*',
+      gulp.config.source + '/js/**/*',
+      gulp.config.source + '/jspm_packages/**/*',
+      gulp.config.source + '/templates/**/*'
     ], function() {
       gulp.start('copy');
     });
