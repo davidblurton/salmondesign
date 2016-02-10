@@ -1,12 +1,9 @@
 @import "colors";
 
 .Hero {
-  &:extend(.section);
   &:extend(.muted);
   text-align: center;
-  background-image: url(img/hero.jpg);
-  background-size: cover;
-  background-position: 50% 0%;
+  padding-bottom: 55px;
 
   h1 {
     color: @heading;
@@ -16,5 +13,15 @@
     font-style: normal;
     font-weight: 400;
     color: @heading;
+  }
+
+  .HeroLinks {
+    margin: 0 -20px;
+    margin-top: 70px;
+  }
+
+  .HeroLink {
+    &:extend(.Header-link);
+    margin: 0 20px;
   }
 }

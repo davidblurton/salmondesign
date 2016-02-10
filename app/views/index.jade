@@ -3,56 +3,41 @@ block content
 
   .Hero
     .container
-      h1 Hi. I'm Rachel Salmon.
-      h3 I’m an English graphic designer based in Reykjavík.
-        br
-        |  Check out my portfolio and
-        a(href="mailto:rachel@salmondesign.co")  say hello
-        | .
+      h1 Hi. <br />I'm Rachel Salmon.
+      h3 I design brands and websites.
 
-  .Featured.Featured--microsoft
-    .container
-      .Featured-date.u-smallCaps December
-        span.u-smallDigit  2014
-      .Featured-title Microsoft Research
-      .Featured-description Identity design for the Human Experience &amp; Design group.
-      a(href="/microsoft").Featured-link Read more
-      .Featured-image.Feature-image--microsoft
+      .HeroLinks
+        a(href="https://dribbble.com/rachelsalmon" target="_blank").HeroLink Dribbble
+        a(href="https://twitter.com/salmondesign" target="_blank").HeroLink Twitter
+        a(href="https://www.behance.net/rachelmsalmon" target="_blank").HeroLink Behance
 
-  .Featured.Featured--oxfam
-    .container
-      .Featured-date.u-smallCaps November
-        span.u-smallDigit  2014
-      .Featured-title Oxfam
-      .Featured-description Print collatoral design for Oxfam, Mill Road.
-      a(href="/oxfam").Featured-link Read more
-      .Featured-image.Feature-image--oxfam
+  .Featured-container
+    .Featured.Featured--oz
+      .Featured-image.Featured-image--oz
+      .Featured-content
+        .Featured-date.u-smallDigit 2016
+        .Featured-title Building a product &mdash; OZ
+        a(href="/oz").Featured-link view project
 
-  .Featured.Featured--capucine
-    .container
-      .Featured-date.u-smallCaps July
-        span.u-smallDigit  2014
-      .Featured-title Capucine EP
-      .Featured-description Album artwork for the beautiful and talented Capucine.
-      a(href="/capucine").Featured-link Read more
-      .Featured-image.Feature-image--capucine
+    .Featured.Featured--microsoft
+      .Featured-image.Featured-image--microsoft
+      .Featured-content
+        .Featured-date.u-smallDigit 2015
+        .Featured-title A new face for Microsoft Research
+        a(href="/microsoft").Featured-link view project
 
-  .Featured.Featured--liveaboard
-    .container
-      .Featured-date.u-smallCaps March
-        span.u-smallDigit  2014
-      .Featured-title The Liveaboard Trust
-      .Featured-description Identity design for a Cambridge-based charity.
-      a(href="/liveaboard").Featured-link Read more
-      .Featured-image.Feature-image--liveaboard
+    .Featured.Featured--oxfam
+      .Featured-image.Featured-image--oxfam
+      .Featured-content
+        .Featured-date.u-smallDigit 2014
+        .Featured-title Encouraging action for Oxfam
+        a(href="/oxfam").Featured-link view project
 
-  .Featured.Featured--arts
-    .container
-      .Featured-date.u-smallCaps March
-        span.u-smallDigit  2014
-      .Featured-title The Cambridge Art Salon
-      .Featured-description Print collatoral design for a Cambridge-based charity.
-      a(href="/arts").Featured-link Read more
-      .Featured-image.Feature-image--arts
+    .Featured.Featured--liveaboard
+      .Featured-image.Featured-image--liveaboard
+      .Featured-content
+        .Featured-date.u-smallDigit 2014
+        .Featured-title Bringing a charity to life
+        a(href="/liveaboard").Featured-link view project
 
   include ./includes/behance
