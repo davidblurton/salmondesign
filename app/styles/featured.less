@@ -6,35 +6,61 @@
 .Featured-container {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
 }
 
 .Featured {
   margin: 0;
-  color: white;
   position: relative;
   text-align: center;
   width: 100vw;
   height: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
 
   @media @desktop {
     width: 50vw;
     height: 50vw;
+  }
 
-    .Featured-content {
-      transition: opacity 300ms 200ms;
-      opacity: 0;
-      z-index: 1;
-    }
+  @media @extra-large {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media @extra-large {
+  .Featured--liveaboard {
+    order: 1;
+  }
+
+  .Featured--oxfam {
+    order: 2;
   }
 }
 
 .Featured:hover {
-  .Featured-content {
-    opacity: 1;
+  border: none;
+}
+
+.Featured-content {
+  transition: opacity 300ms;
+  opacity: .9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  @media @desktop {
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -44,6 +70,7 @@
   position: absolute;
   top: 40px;
   left: 40px;
+  color: #fff;
 }
 
 .Featured-year {
@@ -53,93 +80,57 @@
 .Featured-title {
   &:extend(h2);
   margin: 0;
+  color: #fff;
 }
 
-@media @desktop {
+.Featured-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  background-size: cover;
+  opacity: 0.99;
+  transition: opacity 300ms;
+}
+
+.Featured--oz {
+  .Featured-content {
+    background-color: #d833e2;
+  }
+
   .Featured-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    background-size: cover;
-    opacity: 0.99;
-    transition: opacity 300ms;
-  }
-
-  .Featured-image:hover {
-    opacity: 0;
-  }
-
-  .Featured-image--oz {
     background-image: url(img/featured/oz.jpg);
   }
+}
 
-  .Featured-image--oxfam {
-    background-image: url(img/featured/oxfam.jpg);
+.Featured--microsoft {
+  .Featured-content {
+    background-color: #009A92;
   }
 
-  .Featured-image--microsoft {
+  .Featured-image {
     background-image: url(img/featured/microsoft.png);
   }
+}
 
-  .Featured-image--liveaboard {
+.Featured--oxfam {
+  .Featured-content {
+    background-color: #9380E2;
+  }
+
+  .Featured-image {
+    background-image: url(img/featured/oxfam.jpg);
+  }
+}
+
+.Featured--liveaboard {
+  .Featured-content {
+    background-color: #215273;
+  }
+
+  .Featured-image {
     background-image: url(img/featured/liveaboard.jpg);
-  }
-}
-
-.Featured-link {
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  font-weight: 400;
-  transition: all 0.3s;
-  font-size: 20px;
-  display: block;
-  width: 250px;
-  margin: 50px auto 0 auto;
-}
-
-.Featured-link:after {
-  content: '';
-}
-
-.Featured-link:hover {
-  border: 1px solid white;
-  background-color: white;
-  transition: all 0.3s;
-}
-
-.Featured--oz, .Featured--oz:hover {
-  background-color: #d833e2;
-
-  .Featured-link:hover {
-    color: #d833e2;
-  }
-}
-
-.Featured--microsoft, .Featured--microsoft:hover {
-  background-color: #009A92;
-
-  .Featured-link:hover {
-    color: #009A92;
-  }
-}
-
-.Featured--oxfam, .Featured--oxfam:hover {
-  background-color: #9380E2;
-
-  .Featured-link:hover {
-    color: #9380E2;
-  }
-}
-
-.Featured--liveaboard, .Featured--liveaboard:hover {
-  background-color: #215273;
-
-  .Featured-link:hover {
-    color: #215273;
   }
 }
