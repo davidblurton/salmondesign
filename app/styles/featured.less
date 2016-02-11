@@ -39,6 +39,13 @@
 
 .Featured:hover {
   border: none;
+
+  @media @desktop {
+    .Featured-title {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 }
 
 .Featured-content {
@@ -57,6 +64,7 @@
 
   @media @desktop {
     opacity: 0;
+    transform: translate3d(0, 0, 0);
 
     &:hover {
       opacity: 1;
@@ -81,6 +89,12 @@
   &:extend(h2);
   margin: 0;
   color: #fff;
+
+  @media @desktop {
+    transform: scale(.9);
+    opacity: 0;
+    transition: transform 300ms 100ms, opacity 300ms 100ms;
+  }
 }
 
 .Featured-image {

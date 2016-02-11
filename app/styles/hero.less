@@ -3,7 +3,10 @@
 .Hero {
   &:extend(.muted);
   text-align: center;
-  padding-bottom: 55px;
+
+  @media @desktop {
+    padding-bottom: 55px;
+  }
 
   h1 {
     color: @heading;
