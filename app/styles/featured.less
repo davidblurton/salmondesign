@@ -17,23 +17,8 @@
   height: 100vw;
 
   @media @desktop {
-    width: 50vw;
-    height: 50vw;
-  }
-
-  @media @extra-large {
-    width: 25vw;
-    height: 25vw;
-  }
-}
-
-@media @extra-large {
-  .Featured--liveaboard {
-    order: 1;
-  }
-
-  .Featured--oxfam {
-    order: 2;
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
   }
 }
 
@@ -91,6 +76,7 @@
   color: #fff;
 
   @media @desktop {
+    font-size: 2.5vw;
     transform: scale(.9);
     opacity: 0;
     transition: transform 300ms 100ms, opacity 300ms 100ms;
@@ -148,3 +134,24 @@
     background-image: url(img/featured/liveaboard.jpg);
   }
 }
+
+.Featured--sylvius {
+  .Featured-content {
+    background-color: #FFCBA1;
+  }
+
+  .Featured-image {
+    background-image: url(img/featured/sylvius.jpg);
+  }
+}
+
+.Featured--karneval {
+  .Featured-content {
+    background-color: #4EB482;
+  }
+
+  .Featured-image {
+    background-image: url(img/featured/karneval.png);
+  }
+}
+
