@@ -16,6 +16,10 @@ img {
   margin: 0 auto;
   max-width: calc(100% - 20px);
 
+  @media @tablet {
+    .width(10);
+  }
+
   @media @desktop {
     .width(12);
   }
@@ -24,6 +28,10 @@ img {
 .container--wide {
   .width(4);
   margin: 0 auto;
+
+  @media @tablet {
+    .width(10);
+  }
 
   @media @desktop {
     .width(16);
