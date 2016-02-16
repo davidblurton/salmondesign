@@ -16,6 +16,8 @@ block content
       .Gallery-image
         +responsiveImage("/img/oz/gusgus-feed", "jpg")
       .Gallery-image
+        +responsiveImage("/img/oz/oz-logo", "jpg")
+      .Gallery-image
         +responsiveImage("/img/oz/ipad-air-moments", "jpg")
 
   .Quote.Quote--oz
@@ -26,8 +28,15 @@ block content
   .container--wide
     .Gallery
       .Gallery-image
-        img(src="/img/microsoft/hxd-website-browser.png")
+        +responsiveImage("/img/oz/creator-mac", "jpg")
       .Gallery-image
-        img(src="/img/microsoft/hxd-website-mobile.png")
+        +responsiveImage("/img/oz/email-mac", "jpg")
+
+  .container--wide
+    .Gallery
+      .Gallery-image
+        +responsiveImage("/img/oz/mobile-both", "jpg")
+      .Gallery-image
+        +responsiveImage("/img/oz/retro-poster",  "jpg")
 
   include ../includes/behance
