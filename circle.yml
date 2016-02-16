@@ -26,4 +26,4 @@ deployment:
   staging:
     branch: /.*/
     commands:
-    - gcloud -q preview app deploy app.yaml --version=$CIRCLE_BRANCH
+    - gcloud -q preview app deploy app.yaml --no-promote --version=$CIRCLE_BRANCH
