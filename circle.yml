@@ -16,6 +16,9 @@ dependencies:
 test:
   override:
     - npm run build
+  post:
+    - cp app.yaml dist
+    - cd dist
 
 deployment:
   production:
