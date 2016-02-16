@@ -1,4 +1,5 @@
 runtime: python27
+threadsafe: true
 
 default_expiration: "365d"
 
