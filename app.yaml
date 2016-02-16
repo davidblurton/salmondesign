@@ -1,3 +1,5 @@
+runtime: python27
+
 default_expiration: "365d"
 
 # https://gist.github.com/darktable/873098
