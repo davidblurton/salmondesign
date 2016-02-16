@@ -5,9 +5,9 @@ module.exports = function(gulp, gutil) {
 
   gulp.task('build', ['clean'], function(cb) {
     if(prod) {
-      runSequence('copy', 'less', 'jade', 'images', 'rev', cb);
+      runSequence('copy', 'less', 'jade', 'rev', cb);
     } else {
-      runSequence('copy', 'less', 'jade', 'images', cb);
+      runSequence('copy', 'less', 'jade', cb);
     }
   });
 };
