@@ -16,18 +16,14 @@ dependencies:
 test:
   override:
     - npm run build
-  post:
-    - cp app.yaml dist
 
 deployment:
   production:
     branch: master
     commands:
-    - cd dist
     - gcloud -q preview app deploy app.yaml --promote --version=1
 
   staging:
     branch: /.*/
     commands:
-    - cd dist
     - gcloud -q preview app deploy app.yaml --no-promote --version=$CIRCLE_BRANCH

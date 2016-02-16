@@ -1,6 +1,11 @@
 runtime: python27
 threadsafe: true
 
+skip_files:
+  - app
+  - gulp
+  - node_modules
+
 default_expiration: "365d"
 
 # https://gist.github.com/darktable/873098
