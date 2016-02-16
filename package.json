@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "gulp server",
+    "build": "gulp build --prod",
     "deploy": "./bin/deploy.sh"
   },
   "repository": {

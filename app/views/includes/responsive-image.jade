@@ -1,2 +1,4 @@
-mixin responsiveImage(url, format)
-  img(src="#{url}.#{format}" srcset="#{url}.#{format} 1x, #{url}@2x.#{format} 2x")
+mixin responsiveImage(url)
+  - var extension = url.slice(-3)
+  - var filename = url.slice(0, -4)
+  img(src="#{url}" srcset="#{url} 1x, #{filename}@2x.#{extension} 2x")

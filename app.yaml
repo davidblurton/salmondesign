@@ -1,0 +1,62 @@
+runtime: python27
+threadsafe: true
+
+skip_files:
+  - app
+  - gulp
+  - node_modules
+
+default_expiration: "365d"
+
+# https://gist.github.com/darktable/873098
+
+handlers:
+- url: /(.*\.(appcache|manifest))
+  mime_type: text/cache-manifest
+  static_files: dist/\1
+  upload: dist/(.*\.(appcache|manifest))
+  expiration: "0m"
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: dist/\1
+  upload: dist/(.*\.css)
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: dist/\1
+  upload: dist/(.*\.html)
+  expiration: "1h"
+
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: dist/\1
+  upload: dist/(.*\.ico)
+  expiration: "7d"
+
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: dist/\1
+  upload: dist/(.*\.(svg|svgz))
+
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: dist/\1
+  upload: dist/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+# index files
+- url: /(.+)/
+  static_files: dist/\1/index.html
+  upload: dist/(.+)/index.html
+  expiration: "15m"
+
+- url: /(.+)
+  static_files: dist/\1/index.html
+  upload: dist/(.+)/index.html
+  expiration: "15m"
+
+# site root
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+  expiration: "15m"
