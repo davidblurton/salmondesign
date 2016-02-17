@@ -48,15 +48,15 @@ handlers:
 - url: /(.+)/
   static_files: dist/\1/index.html
   upload: dist/(.+)/index.html
-  expiration: "1d"
+  expiration: "1h"
 
 - url: /(.+)
   static_files: dist/\1/index.html
   upload: dist/(.+)/index.html
-  expiration: "1d"
+  expiration: "1h"
 
 # site root
 - url: /
   static_files: dist/index.html
   upload: dist/index.html
-  expiration: "1d"
+  expiration: "1h"
