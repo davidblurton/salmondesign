@@ -2,9 +2,14 @@ runtime: python27
 threadsafe: true
 
 skip_files:
-  - app
-  - gulp
-  - node_modules
+  - ^(.*/)?#.*#$
+  - ^(.*/)?.*~$
+  - ^(.*/)?.*\.py[co]$
+  - ^(.*/)?.*/RCS/.*$
+  - ^(.*/)?\..*$
+  - ^app$
+  - ^gulp$
+  - ^node_modules$
 
 default_expiration: "365d"
 
@@ -26,13 +31,13 @@ handlers:
   mime_type: text/html
   static_files: dist/\1
   upload: dist/(.*\.html)
-  expiration: "1h"
+  expiration: "0m"
 
 - url: /(.*\.ico)
   mime_type: image/x-icon
   static_files: dist/\1
   upload: dist/(.*\.ico)
-  expiration: "7d"
+  expiration: "0m"
 
 - url: /(.*\.(svg|svgz))
   mime_type: images/svg+xml
@@ -48,15 +53,15 @@ handlers:
 - url: /(.+)/
   static_files: dist/\1/index.html
   upload: dist/(.+)/index.html
-  expiration: "1h"
+  expiration: "0m"
 
 - url: /(.+)
   static_files: dist/\1/index.html
   upload: dist/(.+)/index.html
-  expiration: "1h"
+  expiration: "0m"
 
 # site root
 - url: /
   static_files: dist/index.html
   upload: dist/index.html
-  expiration: "1h"
+  expiration: "0m"
