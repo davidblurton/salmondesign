@@ -40,7 +40,24 @@
   color: @brand-green;
 }
 
+.Project-section {
+  margin-top: 40px;
+}
+
 .Project-sectionTitle {
   font-weight: 700;
   font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+.Project-images {
+  margin: 20px -10px;
+
+  @media @tablet {
+    margin: 20px 0;
+  }
+
+  img + img {
+    margin: 0;
+  }
 }
