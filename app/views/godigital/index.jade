@@ -1,0 +1,28 @@
+include ../includes/responsive-image
+
+extends ../layout.jade
+block content
+  .Project
+    .Project-title Go Digital Conference
+    .Project-subTitle Branding
+
+    p Each year Kolibri holds a conference in Reykjavik with a focus on design and software development.
+    p 2016 marked the 10th year of the conference, so we thought it fitting to rebrand the newly named &ldquo;Go Digital&rdquo; and create beautiful conference swag to boot. I was asked to design the conference collateral, taking elements from the pre-made 
+      a(href="https://2016.godigital.is/" target="_blank") godigital.is
+      |.
+    p The designs included name badges, conference booklets, and speaker slides.
+    
+    .container
+      +responsiveImage("/img/godigital/flatlay.jpg")
+      +responsiveImage("/img/godigital/schedule.jpg")
+      +responsiveImage("/img/godigital/speakers.jpg")
+      +responsiveImage("/img/godigital/names.jpg")
+      +responsiveImage("/img/godigital/coffee.jpg")
+    
+    p Attendees wore the turquoise badges from the Go Digital colour palette, and Kolibri staff wore yellow name badges so attendees knew who to ask for help if necessary.
+      
+    .container
+      +responsiveImage("/img/godigital/nametags.jpg")
+      +responsiveImage("/img/godigital/slide.jpg")
+      
+  include ../includes/behance
