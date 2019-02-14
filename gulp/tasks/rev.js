@@ -10,9 +10,9 @@ module.exports = function(gulp, gutil) {
         base: gulp.config.target,
         ignore: [
           'index.html',
-          'favicon.png',
+          'favicon.ico',
           'CNAME',
-          'og.jpg'
+          'og.png'
         ],
         quiet: true
       }))
