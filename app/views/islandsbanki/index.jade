@@ -1,0 +1,60 @@
+include ../includes/responsive-image
+
+extends ../layout.jade
+block content
+  .Project
+    .Project-title Íslandsbanki
+    .Project-subTitle Design System
+
+    p Íslandsbanki (the bank of Iceland) is known for its great customer service, offering customers a warm welcome in every branch. But where its branches were succeeding, its decade-old website was letting it down. 
+    p Our goal was to to bring Íslandsbanki's delightful customer experience to the web. The public-facing website was given a complete refresh, achieving a more pleasant and intuitive user experience. Alongside the redesign, we built a comprehensive digital design system that allows future design work to be rolled out quickly with a consistent look to the rest of the site.
+    p Quite a few months were spent researching, exploring, presenting, documenting, and then exploring some more. I'm going to fast forward a little and show you just some of the outputs from this huge project. 
+
+    .Project-images
+      +responsiveImage("/img/islandsbanki/colourpalette.png")
+      +responsiveImage("/img/islandsbanki/typography.png")
+      +responsiveImage("/img/islandsbanki/components.png")
+      +responsiveImage("/img/islandsbanki/cards.png")
+    
+    p It was paramount that the design system could respond to content frequently being updated by content creators after the project handover. 
+    p The items from the digital design system form the building blocks for larger components, which content managers could use to piece together beautiful new pages to the website quickly and independantly.  
+      
+    .Project-images
+      +responsiveImage("/img/islandsbanki/landing.png")
+
+    p I enjoyed redesigning some of the key elements on the website, particularly those that would bring real value to users. One example of this is the mortgage calculator. I loved the challenge of transforming a complex and confusing product into something intuitive and beautiful. 
+
+    .Project-images
+      +responsiveImage("/img/islandsbanki/mortgagecalc.png")
+
+    p 
+
+    p See the full project live at  
+     a(href="https://www.islandsbanki.is/" target="_blank") islandsbanki.is
+
+
+    br
+    br
+
+    p This was not a solo show. Shout out to the whole team who helped create this. 
+    
+    p 
+      p
+      p
+        a(href="https://dribbble.com/steifar" target="_blank") Steinar Ingi Farestveit 
+        |// Creative Direction
+      p Me // Design Lead
+      p Rakel Björt Jónsdóttir // Development
+      p
+        a(href="https://github.com/jdwillemse" target="_blank") JD Williams 
+        |// Development
+      p
+        a(href="https://codepen.io/haraldurkarls/" target="_blank") Halli Karlsson 
+        |// Development
+      p Bippi // Development
+      p Benedikt Hauksson // Team Coach
+      p Guðrún Skúladóttir // Product Owner & Content Manager 
+      p Eygló Benediktsdóttir // Content Manager 
+
+      
+  include ../includes/behance

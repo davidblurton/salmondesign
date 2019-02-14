@@ -37,7 +37,7 @@
 
 .Resume-sectionTitle {
   &:extend(h3);
-  color: @brand-green;
+  color: @link;
   text-align: center;
 }
 
@@ -72,12 +72,12 @@
 .Job-details:before {
   content: '';
   position: absolute;
-  left: -16px;
-  top: -3px;
-  width: 30px;
-  height: 30px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" enable-background="new 0 0 40 40"><path fill="#A0D2BE" d="M20 40C9 40 0 31 0 20S9 0 20 0s20 9 20 20-9 20-20 20zm0-30.7C14.1 9.3 9.3 14.1 9.3 20S14.1 30.7 20 30.7 30.7 25.9 30.7 20 25.9 9.3 20 9.3z"/></svg>');
-  background-size: contain;
+  left: -14px;
+  top: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 5px solid @brand-green;
 }
 
 .Job-details:after {
