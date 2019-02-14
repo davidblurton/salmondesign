@@ -16,6 +16,7 @@ jobs:
           root: .
           paths:
             - dist
+            - app.yaml
       - save_cache:
           key: node-modules-{{ checksum "package.json" }}
           paths:
@@ -27,7 +28,6 @@ jobs:
       - image: google/cloud-sdk
     steps:
       - checkout
-      - setup_remote_docker
       - attach_workspace:
           at: .
       - run:
@@ -44,9 +44,9 @@ jobs:
           name: Deploy to App Engine
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              gcloud -q preview app deploy app.yaml --promote --version=1
+              gcloud -q app deploy app.yaml --promote --version=1
             else
-              gcloud -q preview app deploy app.yaml --no-promote --version=$CIRCLE_BRANCH
+              gcloud -q app deploy app.yaml --no-promote --version=$CIRCLE_BRANCH
             fi
 
 workflows:
