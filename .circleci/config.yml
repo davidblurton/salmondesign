@@ -1,0 +1,55 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/salmondesign
+    docker:
+      - image: circleci/node:6
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+      - save_cache:
+          key: node-modules-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+  deploy:
+    working_directory: ~/salmondesign
+    docker:
+      - image: google/cloud-sdk
+    steps:
+      - checkout
+      - setup_remote_docker
+      - attach_workspace:
+          at: .
+      - run:
+          name: Auth gCloud SDK
+          command: |
+            # Retrieve our secrets from the CircleCI environment
+            echo $CLIENT_SECRET | base64 --decode > ${HOME}/client-secret.json
+            # authenticate gcloud
+            gcloud auth activate-service-account --key-file ${HOME}/client-secret.json
+            # Replace <your-project-id>
+            gcloud config set project $GCLOUD_PROJECT
+            # Workaround bug in gcloud
+            gcloud config set app/use_gsutil true
+      - run:
+          name: Deploy to App Engine
+          command: gcloud -q preview app deploy app.yaml --no-promote --version=$CIRCLE_BRANCH
+
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
