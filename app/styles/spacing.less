@@ -27,6 +27,21 @@ img {
   }
 }
 
+.text-container {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+
+  @media @tablet {
+    .width(8);
+    padding: 0;
+  }
+
+  @media @desktop {
+    .width(10);
+  }
+}
+
 .container--wide {
   .width(4);
   margin: 0 auto;
