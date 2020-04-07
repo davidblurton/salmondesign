@@ -11,7 +11,7 @@ skip_files:
   - ^gulp$
   - ^node_modules$
 
-default_expiration: "365d"
+default_expiration: "300s"
 
 # https://gist.github.com/darktable/873098
 
